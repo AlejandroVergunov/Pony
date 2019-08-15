@@ -20,6 +20,7 @@ while True:
             ORDER BY oo.OrderNumber'''.format(client_number)
     cursor.execute(sql_get)
     gerrits = cursor.fetchall()
+    
     for i in gerrits:
         x += 1
         for b in i:
