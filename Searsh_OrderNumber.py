@@ -20,24 +20,23 @@ while True:
             ORDER BY oo.OrderNumber'''.format(client_number)
     cursor.execute(sql_get)
     gerrits = cursor.fetchall()
-    
     for i in gerrits:
         x += 1
         for b in i:
             print(b)
         print('*' * 12)
     if x == 0:
-        print('\nЗаказы не найдены' + '\n' )
+        print('Заказы не найдены' + '\n' )
     elif x == 1:
-        print('\nНайден ' + str(x) + ' заказ.' + '\n' )
+        print('Найден ' + str(x) + ' заказ.' + '\n' )
     elif x % 10 >= 2 and x % 10 <= 4:
-        print('\nНайдено ' + str(x) + ' заказа' + '\n' )
+        print('Найдено ' + str(x) + ' заказа' + '\n' )
     elif x%10==1:
-        print('\nНайден ' + str(x) + ' заказ.' + '\n' )
+        print('Найден ' + str(x) + ' заказ.' + '\n' )
     elif x % 100 >= 10 and x % 100 <= 20:
-        print('\nНайдено ' + str(x) + ' заказов' + '\n' )
+        print('Найдено ' + str(x) + ' заказов' + '\n' )
     else:
-        print('\nНайдено ' + str(x) + ' заказов' + '\n' )
+        print('Найдено ' + str(x) + ' заказов' + '\n' )
     x = 0
     conn.close()
 
